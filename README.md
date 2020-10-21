@@ -1,3 +1,3 @@
 # simple-java-programs
 
-simple program for hacktoberfest 😁😁
+simple program for hacktoberfest2020😁😁
