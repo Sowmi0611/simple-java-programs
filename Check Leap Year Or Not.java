@@ -1,21 +1,33 @@
 import java.util.Scanner;
-class Leapyear
-{
-	public static void main(String arg[])
-	{
-	    long a,y,c;
-             	    Scanner sc=new Scanner(System.in);
-	    System.out.print("enter  any  calendar year :");
-                   y=sc.nextLong();
-	    if(y!=0)
-	    {
-		a=(y%400==0)?(c=1):((y%100==0)?(c=0):((y%4==0)?(c=1):(c=0)));
-		if(a==1)
-		    System.out.println(y+" is a leap year");
-               	else
-		    System.out.println(y+" is not a leap year");
-	    }
-	    else
-		System.out.println("year zero does not exist ");
- 	}
+
+public class LeapYear {
+
+    public static void main(String[] args) {
+
+        int year;
+        Scanner leap=new Scanner(System.in);
+        System.out.print("Ente year :");
+        boolean leap = false;
+
+        if(year % 4 == 0)
+        {
+            if( year % 100 == 0)
+            {
+                // year is divisible by 400, hence the year is a leap year
+                if ( year % 400 == 0)
+                    leap = true;
+                else
+                    leap = false;
+            }
+            else
+                leap = true;
+        }
+        else
+            leap = false;
+
+        if(leap)
+            System.out.println(year + " is a leap year.");
+        else
+            System.out.println(year + " is not a leap year.");
+    }
 }
