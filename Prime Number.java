@@ -4,24 +4,22 @@ class Prime
 	public static void main(String arg[])
 	{
 
-  System.out.println("Enter a number ");
-	Scanner sc=new Scanner(System.in);
-	int n=sc.nextInt();
-	primeCal(n);
-	}
-   static void primeCal(int num)
-   {
-	int count=0;
-	for(int i=1;i<=num;i++)
-	{
-	   if(num%i==0)
-	   {
-	        count++;
-	   }
-	}
-	if(count==2)
-	       System.out.println("prime number ");
-	else
-	System.out.println("Not a prime number ");
-   }
+ 	System.out.println("Enter a number ");
+	Scanner scanner=new Scanner(System.in);
+	int num=scanner.nextInt();
+	boolean flag = false;
+        for(int i = 2; i <= num/2; ++i)
+        {
+            if(num % i == 0)
+            {
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
+    }
 }
